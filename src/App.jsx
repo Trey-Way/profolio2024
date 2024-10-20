@@ -47,14 +47,14 @@ function App() {
             <h1></h1>
             <span class="bub a"></span>
             <span class="bub b"></span>
-            <span class="bub c"></span>
+            {/* <span class="bub c"></span> */}
             <span class="bub d"></span>
             <span class="bub e"></span>
             <span class="bub f"></span>
-            <span class="bub g"></span>
+            {/* <span class="bub g"></span> */}
             <span class="bub h"></span>
-            <span class="bub i"></span>
-            <span class="bub j"></span>
+            {/* <span class="bub i"></span> */}
+            {/* <span class="bub j"></span> // dev- blocked out due to streching across page */}
             <span class="bub k"></span> 
             {/* <div className={`fish ${animationActive ? 'active' : ''}`}
               style={{ backgroundImage: `url(${dorey})` }}
