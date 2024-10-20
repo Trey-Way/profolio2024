@@ -7,6 +7,10 @@
     /* box-sizing: border-box; */
 }
 
+#section5{
+    height: 70vh;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -398,8 +402,7 @@ header{
     height: 50px;
     display: flex;
     justify-content: space-between;
-    width: auto;
-    
+    width: auto=    
 
 
     

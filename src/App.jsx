@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import './App.css';
+import './css/App.css';
 import dorey from './Dorey.gif';
+import Contact from './Contact';
 
 
 
@@ -116,7 +117,7 @@ function App() {
         </div>
       </section>
       <section id="section4">
-        <h3 id="s3top">How do I contact?</h3>
+        <h3 id="s3top">How do I see more information?</h3>
         <div className="icons">
           <a href="https://docs.google.com/document/d/151Fey3FCzpfSWTgiJc_0aJjggXU7It3FbLRQGEJbjZI/edit?usp=sharing">
             <div className="resume-icon">
@@ -135,6 +136,9 @@ function App() {
               <i className="fa fa-user-circle-o"></i>
               <h2>LinkedIn</h2>
             </div>
+            <section id="section5">
+            <Contact />
+            </section>
           </a>
         </div>
       </section>
