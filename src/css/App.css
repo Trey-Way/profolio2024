@@ -1,3 +1,26 @@
+/* ===== CRITICAL BASE STYLES ===== */
+html, body, #root {
+    width: 100%;
+    min-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    position: relative;
+    min-height: 100vh;
+  }
+
+
+
 /* Desktop Section */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 *{
@@ -9,6 +32,9 @@
 
 #section5{
     height: 70vh;
+    width: 100vw;
+    min-width: 100vw;
+    overflow-x: hidden;
 }
 
 html {
@@ -258,6 +284,65 @@ a{
     margin: 5px -22px 11px 50px;
     font-weight: 400;
 }
+
+@media only screen and (max-width: 320px) {
+    /* Force full width on all sections */
+     #section1, #section2, #section3, #section4, #section5 {
+      width: 100vw !important;
+      min-width: 100vw !important;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+  
+    /* Fix header spacing */
+    header {
+      padding: 0 15px !important;
+    }
+  
+    /* Center and adjust opening text */
+    .opening-text {
+      transform: none !important;
+      text-align: center;
+    }
+    
+    .op-name1, .op-name3 {
+      margin-left: 0 !important;
+      font-size: 1.8rem !important;
+      text-align: center;
+      display: block;
+      width: 100%;
+    }
+  
+    /* Fix project boxes */
+    .box1, .box2, .box3 {
+      width: 100% !important;
+      left: 0 !important;
+      margin: 10px 0 !important;
+    }
+  
+    /* Adjust text positioning */
+    .box1Text {
+      margin: 20px 0 0 0 !important;
+      width: 100% !important;
+      text-align: center;
+    }
+  
+    /* Fix mobile menu positioning */
+    .open .mobile-menu {
+      right: 0 !important;
+      top: 50px !important;
+      width: 100% !important;
+      margin: 0 !important;
+    }
+  
+    /* Fix icon spacing */
+    .icons {
+      margin-left: 0 !important;
+      justify-content: center !important;
+    }
+  }
+
+
 @media only screen and (min-width: 1220px){
     #section4{
     margin: 224px 6px 0px 0px;
@@ -281,9 +366,11 @@ a{
     height: 270px;
     background-color: rgb(22, 22, 22);
     color: rgb(255, 255, 255);
-    width: auto;
     display: flex;
     padding: 0px 0px 240px 0px;
+    width: 100vw;
+    min-width: 100vw;
+    overflow-x: hidden;
 }
 
 .bracket2{
@@ -342,16 +429,20 @@ a{
 #section3{
     /* margin: 30vh 30vh 30vh; */
     color:white;
-    height:300px;
+    height: auto;
     background-color: #000000;
-    width: auto;
+    width: 100vw;
+    min-width: 100vw;
+    overflow-x: hidden;
 }
 
 #section2{
     height: 401px;
     background-color: white;
     color: black;
-    width: auto;
+    width: 100vw;
+    min-width: 100vw;
+    overflow-x: hidden;
    
 }
 
@@ -377,6 +468,9 @@ z-index: 0;
 color: white;
 font-family: 'Ubuntu', sans-serif;
 font-size: 25px;
+width: 100vw;
+min-width: 100vw;
+overflow-x: hidden;
 }
 
 /* .op-name2{
@@ -402,10 +496,11 @@ header{
     height: 50px;
     display: flex;
     justify-content: space-between;
-    width: auto=    
-
-
-    
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;  
 }
 
 li{
@@ -448,6 +543,11 @@ ul li:hover {
 body{
     background-color: black;
 }
+section2,section3,section4,section5{
+    width: 50%
+
+}
+
 
 
 

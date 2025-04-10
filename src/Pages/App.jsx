@@ -1,9 +1,8 @@
-import { useState } from 'react';
-import './css/App.css';
-import dorey from './Dorey.gif';
+
+import '../css/App.css';
+import dorey from '../Dorey.gif';
 import Contact from './Contact';
-
-
+import { useState, useRef } from 'react';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -11,13 +10,17 @@ function App() {
   const handleClick = () => {
     setAnimationActive((prev) => !prev);
   };
+  const [menuOpen, setMenuOpen] = useState(false);
+  const toggleMobileMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-  function toggleMobileMenu(menu) {
-    menu.classList.toggle(`open`);
-}
 
   return (
     <div>
+      <div style={{
+      width: '100vw',overflowX: 'hidden',
+      position: 'relative'}}>
       <header id="nav">
         <div className="nav-name">Trey Williams</div>
         <nav className="navbar">
@@ -27,16 +30,22 @@ function App() {
             <li className="nav-contact"><a href="#section4">Contact</a></li>
           </ul>
         </nav>
-        <div id="hamburger-icon" onClick={() => toggleMobileMenu(this)}>
-          <div className="bar1"></div>
-          <div className="bar2"></div>
-          <div className="bar3"></div>
-          <ul className="mobile-menu">
-            <li className="nav-mobile-about"><a href="#section2">About</a></li>
-            <li className="nav-mobile-project"><a href="#section3">Projects</a></li>
-            <li className="nav-mobile-contact"><a href="#section4">Contact</a></li>
-          </ul>
-        </div>
+        <div 
+    id="hamburger-icon" 
+    onClick={toggleMobileMenu}
+    className={menuOpen ? 'open' : ''}
+  >
+    <div className="bar1"></div>
+    <div className="bar2"></div>
+    <div className="bar3"></div>
+    {menuOpen && (
+      <ul className="mobile-menu">
+        <li className="nav-mobile-about"><a href="#section2" onClick={toggleMobileMenu}>About</a></li>
+        <li className="nav-mobile-project"><a href="#section3" onClick={toggleMobileMenu}>Projects</a></li>
+        <li className="nav-mobile-contact"><a href="#section4" onClick={toggleMobileMenu}>Contact</a></li>
+      </ul>
+    )}
+  </div>
       </header>
       <section id="section1">
         <div className="opening-text" onClick={handleClick}>
@@ -83,6 +92,43 @@ function App() {
           </h2>
           <h3 className="bracket2">]</h3>
         </div>
+        {/* <div className="experience">
+          <h2> My journey started in college. I was working hard on my 
+            degree in computer science, when I've heard about coding bootcamps,
+            and I decided to take a leap of faith and join one. I've learned a lot
+            about web development and software engineering in a short amount of time, from
+            simple scripting languages like html, css, and javascript to more complex technologies like React, Django, and Express.
+            I've also learned how to work in a team environment, and how to communicate effectively with my peers.
+          </h2>
+          <h2>also have experience with the following technologies:
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Redux</li>
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>Python</li>
+            <li>Flask</li>
+            <li>PostgreSQL</li>
+            <li>Sequelize</li>
+            <li>SQLite</li>
+            <li>Git</li>
+            <li>GitHub</li>
+            <li>Heroku</li>
+            <li>Netlify</li>
+            <li>VS Code</li>
+            <li>Postman</li>
+            <li>Slack</li>
+            <li>Zoom</li>
+            <li>Google Suite</li>
+            <li>Microsoft Office</li>
+            <li>Adobe Creative Suite</li>
+          </ul>
+          </h2>
+
+        </div> */}
       </section>
       <section id="section3">
         <div id="project_box">
@@ -136,12 +182,13 @@ function App() {
               <i className="fa fa-user-circle-o"></i>
               <h2>LinkedIn</h2>
             </div>
-            <section id="section5">
+            {/* <section id="section5">
             <Contact />
-            </section>
+            </section> */}
           </a>
         </div>
       </section>
+    </div>
     </div>
   );
 }
