@@ -183,7 +183,7 @@ function App() {
               <h2>LinkedIn</h2>
             </div>
             {/* <section id="section5">
-            <Contact />
+            // <Contact />
             </section> */}
           </a>
         </div>

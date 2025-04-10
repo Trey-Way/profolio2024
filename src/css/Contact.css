@@ -10,7 +10,7 @@
 
 form{
     max-width: 600px;
-    width: 100%;
+    width: 100vw;
     background: #fff;
     padding: 25px 25px 30px;
     border-radius: 8px;
